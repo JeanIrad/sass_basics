@@ -1,0 +1,16 @@
+@import './variables';
+@import './header';
+
+@mixin container($bgColor) {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  background-color: $bgColor;
+}
+.contact button {
+  background-color: $secondaryBtn;
+}
+
+.contact {
+  @include container(lightcoral);
+}

@@ -1,0 +1,39 @@
+header {
+  background: #464672;
+  display: flex;
+  justify-content: center;
+  color: $textColor;
+  button {
+    background-color: $primaryBtn;
+    position: relative;
+    // inset: 0;
+    z-index: 10;
+    &::after {
+      height: 80%;
+      width: 80%;
+      position: absolute;
+      background-color: rgb(209, 61, 61);
+      top: 0;
+      content: '';
+      clip-path: polygon(0 36%, 0 0, 100% 0, 100% 100%, 66% 100%, 97% 15%);
+      right: 0;
+      z-index: 1;
+    }
+    &:hover {
+      background-color: transparent;
+    }
+    &:hover::after {
+      background-color: #080896;
+    }
+    &::before {
+      position: absolute;
+      height: 50%;
+      width: 60%;
+      bottom: 0;
+      left: 0;
+      content: '';
+      clip-path: polygon(0 36%, 0 0, 0 100%, 100% 100%, 66% 100%, 81% 30%);
+      background-color: #33b448;
+    }
+  }
+}

@@ -1,0 +1,51 @@
+header {
+  background: #464672;
+  display: flex;
+  justify-content: center;
+  color: teal;
+}
+header button {
+  background-color: rgb(61, 128, 173);
+  position: relative;
+  z-index: 10;
+}
+header button::after {
+  height: 80%;
+  width: 80%;
+  position: absolute;
+  background-color: rgb(209, 61, 61);
+  top: 0;
+  content: "";
+  -webkit-clip-path: polygon(0 36%, 0 0, 100% 0, 100% 100%, 66% 100%, 97% 15%);
+          clip-path: polygon(0 36%, 0 0, 100% 0, 100% 100%, 66% 100%, 97% 15%);
+  right: 0;
+  z-index: 1;
+}
+header button:hover {
+  background-color: transparent;
+}
+header button:hover::after {
+  background-color: #080896;
+}
+header button::before {
+  position: absolute;
+  height: 50%;
+  width: 60%;
+  bottom: 0;
+  left: 0;
+  content: "";
+  -webkit-clip-path: polygon(0 36%, 0 0, 0 100%, 100% 100%, 66% 100%, 81% 30%);
+          clip-path: polygon(0 36%, 0 0, 0 100%, 100% 100%, 66% 100%, 81% 30%);
+  background-color: #33b448;
+}
+
+.contact button {
+  background-color: rgb(62, 122, 62);
+}
+
+.contact {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  background-color: lightcoral;
+}/*# sourceMappingURL=styles.css.map */
